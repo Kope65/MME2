@@ -1,0 +1,16 @@
+{
+  "name": "Exercise_2",
+  "author": "Toni Kluth",
+  "version": "1.0.0",
+  "description": "Hello World Server",
+  "devDependencies": {
+    "express": "~4.13.4",
+    "body-parser": "~1.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kope65/MME2.git"
+  },
+  "license": "MIT",
+  "main": "app.js"
+}
