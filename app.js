@@ -13,7 +13,6 @@
 var path = require('path');
 var express = require('express');
 var bodyParser = require('body-parser');
-var fs = require('fs');
 
 // Main app
 var app = express();
@@ -30,6 +29,8 @@ app.use(function (req, res, next) {
     console.log('Middleware is working! Twice!');
     next();
 });
+
+app.use('/public', express.static(__dirname + '/public'));
 
 // ***** Routes *****
 // GET request prints a line in console
@@ -51,12 +52,6 @@ app.get('/', function (req, res) {
     .delete('/', function (req, res) {
         res.send('Hello World!');
     });
-
-// GET request gets index.html
-app.get('/public', function (req, res) {
-    fs.open('/index.html');
-});
-
 
 // ***** Server *****
 // Starts the server listening on port 3000
